@@ -1,0 +1,95 @@
+###
+POST http://localhost:9000/api/estudiante HTTP/1.1
+Content-Type: application/json
+
+{
+    "cedula" : "1094959567",
+    "nombre" : "Yeraldin",
+    "niveleducativo" : "profesional",
+    "email" : "yeraldin6011@hotmail.com",
+    "telefono" : "3112435688",
+    "buscartutor" : "ingles"
+}
+
+###
+GET http://localhost:9000/api/estudiante HTTP/1.1
+
+###
+GET http://localhost:9000/api/estudiante656d93867aaf0212123f8d76 HTTP/1.1
+
+###
+PUT http://localhost:9000/api/estudiante656d93867aaf0212123f8d76 HTTP/1.1
+Content-Type: application/json
+
+{
+    "cedula" : "1094959567",
+    "nombre" : "Yeraldin",
+    "niveleducativo" : "profesional",
+    "email" : "yeraldin6011@hotmail.com",
+    "telefono" : "3112435688",
+    "buscartutor" : "ingles"
+}
+
+###
+DELETE  http://localhost:9000/api/estudiante656d93867aaf0212123f8d76656d93867aaf0212123f8d76 HTTP/1.1
+
+###
+POST http://localhost:9000/api/tutor HTTP/1.1
+Content-Type: application/json
+
+{
+    "cedula" : "34534849",
+    "nombre" : "Jhon Restrepo",
+    "especialidad" : "matematicas",
+    "tarifaporhora" : "50000",
+    "email" : "jhonjrestrepo@hotmail.com",
+    "horariodisponible" : "tardes"
+}
+
+###
+POST http://localhost:9000/api/tutor HTTP/1.1
+Content-Type: application/json
+
+{
+    "cedula" : "10956789900",
+    "nombre" : "Nicolas jimenez",
+    "especialidad" : "literatura",
+    "tarifaporhora" : "40000",
+    "email" : "nicolas14@hotmail.com",
+    "horariodisponible" : "noches"
+}
+
+###
+GET http://localhost:9000/api/tutor HTTP/1.1
+
+###
+GET http://localhost:9000/api/tutor65712421c1131dabd57ac371 HTTP/1.1
+
+###
+PUT http://localhost:9000/api/tutor65712421c1131dabd57ac371 HTTP/1.1
+Content-Type: application/json
+
+{
+    "cedula" : "34534849",
+    "nombre" : "Jhon Restrepo",
+    "especialidad" : "matematicas",
+    "tarifaporhora" : "50000",
+    "email" : "jhonjrestrepo@hotmail.com",
+    "horariodisponible" : "tardes"
+}
+###
+DELETE  http://localhost:9000/api/tutor657141b5b42e5339df849043 HTTP/1.1
+
+###
+POST http://localhost:9000/api/administrador HTTP/1.1
+Content-Type: application/json
+
+{
+   "cedula" : "10233467",
+    "nombre" : "Nelson Barrera",
+    "email" : "nelson23@hotmail.com",
+    "telefono" : "32455667"
+}
+
+###
+GET http://localhost:9000/api/administrador HTTP/1.1
