@@ -1,31 +1,39 @@
-import { Schema, model } from "mongoose";
+const moongose = require("mongoose");
+const autopopulate = require('mongoose-autopopulate');
+const { Persona } = require("./Personas");
 
-const estudianteSchema = Schema({
-    cedula: {
+class Estudiante extends Persona {
+    niveleducativo = {
         type: String,
         required: true
-    },
-    nombre: {
-        type: String,
-        required: true
-    },
-    niveleducativo: {
-        type: String,
-        required: true
-    },
-    email: {
-        type: String,
-        required: true
-    },
-    telefono: {
-        type: String,
-        required: true
-    },
-    buscartutor: {
-        type: String,
-        required: true
-    },
-});
+    }
 
+    // Un estudiante puede programas clase con varios tutores y buscar muchos tutores
+    Tutors = { type: [moongose.Schema.Types.ObjectId], ref: "tutor", autopopulate: true, required: false }
 
-export default model("estudiante", estudianteSchema);
+    getNombre() {
+        return this.nombre;
+    }
+
+    getNivelEducativo() {
+        return this.niveleducativo;
+    }
+
+    getEmail() {
+        return this.email;
+    }
+
+    getTelefono() {
+        return this.telefono;
+    }
+
+    buscarTutor(especialidad) {
+        return this.Tutors.find(tutor => tutor.especialidad === especialidad);
+    }
+}
+const estudianteSchema = moongose.Schema(new Estudiante());
+estudianteSchema.loadClass(Estudiante);
+estudianteSchema.plugin(autopopulate);
+
+module.exports.EstudianteModel = moongose.model("estudiante", estudianteSchema);
+module.exports.estudianteSchema = estudianteSchema;

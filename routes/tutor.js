@@ -1,57 +1,34 @@
 const express = require("express");
-const tutorSchema = require("../models/tutor");
-
 const router = express.Router();
 
-// crear tutor
+const { TutorService } = require("../service/TutorService");
+const tutorService = new TutorService();
 
-router.post("/tutor", (req, res) => {
-    const tutor = tutorSchema(req.body);
-    tutor.save()
-    .then((data) => res.json(data))
-    .catch((error) => res.json(error)) 
-});
+/**
+ * GET para consultar todos los tutores
+ */
+router.get("/tutor", tutorService.getTutores);
 
-// consultar tutor
+/**
+ * GET para consultar un tutor por numero de Id
+ */
+router.get("/tutor/:id", tutorService.getTutorById);
 
-router.get("/tutor", (req, res) => {
-    tutorSchema
-    .find()
-    .then((data) => res.json(data))
-    .catch((error) => res.json({ message: error}));
-});
+/**
+ * POST para agregar tutores
+ */
+router.post("/tutor", tutorService.postTutor);
 
-// consultar UN tutor
-
-router.get("/tutor:id", (req, res) => {
-    const {id} = req.params;
-    tutorSchema
-    .findById(id)
-    .then((data) => res.json(data))
-    .catch((error) => res.json({ message: error}));
-});
-
-// Actualizar un tutor
-
-router.put("/tutor:id", (req, res) => {
-    const {id} = req.params;
-    const { cedula, nombre, especialidad, tarifaporhora, email, horariodisponible} = req.body;
-    tutorSchema
-    .updateOne({ _id: id}, { $set: {cedula, nombre, especialidad, tarifaporhora, email, horariodisponible} })
-    .then((data) => res.json(data))
-    .catch((error) => res.json({ message: error}));
-});
+/**
+ * PUT par actualizar un tutor por numero de Id
+ */
+router.put("/tutor/:id", tutorService.updateTutor);
 
 
-// Eliminar un tutor
-
-router.delete("/tutor:id", (req, res) => {
-    const {id} = req.params;
-    tutorSchema
-    .deleteOne({ _id: id})
-    .then((data) => res.json(data))
-    .catch((error) => res.json({ message: error}));
-});
+/**
+ * DELETE para eliminar un tutor
+ */
+router.delete("/tutor/:id", tutorService.deleteTutor);
 
 
 module.exports = router;
