@@ -14,11 +14,11 @@ router.get("/estudiante", estudianteService.getEstudiantes);
 router.get("/estudiante/:id", estudianteService.getEstudianteById);
 
 // Actualizar un estudiante
-router.put("/estudiante:id", estudianteService.updateEstudiante);
+router.put("/estudiante/:id", estudianteService.updateEstudiante);
 
 
 // Eliminar un estudiante
-router.delete("/estudiante:id", estudianteService.deleteEstudiante);
+router.delete("/estudiante/:id", estudianteService.deleteEstudiante);
 
 
 module.exports = router;

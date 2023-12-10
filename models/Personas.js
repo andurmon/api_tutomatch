@@ -1,6 +1,6 @@
 const moongose = require("mongoose");
 
-// Clase Persona
+// Clase Persona base para las demas clases
 class Persona {
 
     nombre = {

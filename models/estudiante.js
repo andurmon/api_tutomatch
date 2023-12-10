@@ -2,6 +2,8 @@ const moongose = require("mongoose");
 const autopopulate = require('mongoose-autopopulate');
 const { Persona } = require("./Personas");
 
+
+//Clase Estudiante hereda de la clase Persona
 class Estudiante extends Persona {
     niveleducativo = {
         type: String,
@@ -35,5 +37,6 @@ const estudianteSchema = moongose.Schema(new Estudiante());
 estudianteSchema.loadClass(Estudiante);
 estudianteSchema.plugin(autopopulate);
 
+module.exports.Estudiante = Estudiante;
 module.exports.EstudianteModel = moongose.model("estudiante", estudianteSchema);
 module.exports.estudianteSchema = estudianteSchema;

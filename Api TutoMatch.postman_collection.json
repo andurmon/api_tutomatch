@@ -1,0 +1,578 @@
+{
+	"info": {
+		"_postman_id": "a62b7c29-5ee8-48eb-98f0-414d6eefc6f5",
+		"name": "Api TutoMatch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12873000"
+	},
+	"item": [
+		{
+			"name": "Estudiantes",
+			"item": [
+				{
+					"name": "Get estudiantes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/API/estudiante",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"estudiante"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get estudiantes by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/API/estudiante/6574f84fb1f830d33f2533b1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"estudiante",
+								"6574f84fb1f830d33f2533b1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post estudiantes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Yessika Meliza\",\r\n    \"cedula\": \"645869479\",\r\n    \"edad\": 26,\r\n    \"direccion\": \"calle 2 carrara 4\",\r\n    \"telefono\": \"354687987\",\r\n    \"email\": \"andurmon@gmail.com\",\r\n    \"tipoUsuario\": \"estudiante\",\r\n    \"niveleducativo\": \"bachiller\",\r\n    \"Tutors\": [\r\n        \"65749ed2e951a7fee61c1fa2\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/API/estudiante",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"estudiante"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Estudiante",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Yessika Meliza\",\r\n    \"cedula\": \"645869479\",\r\n    \"edad\": 26,\r\n    \"direccion\": \"calle 2 carrara 4\",\r\n    \"telefono\": \"354687987\",\r\n    \"email\": \"andurmon@gmail.com\",\r\n    \"tipoUsuario\": \"estudiante\",\r\n    \"niveleducativo\": \"bachiller\",\r\n    \"Tutors\": [\r\n        \"6574f83ab1f830d33f2533ae\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/API/estudiante/65750e48c35e220d7caf666d",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"estudiante",
+								"65750e48c35e220d7caf666d"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "65712421c1131dabd57ac371",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete estudiante By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/API/estudiante/6570d6193124f410a338df09",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"estudiante",
+								"6570d6193124f410a338df09"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "65712421c1131dabd57ac371",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tutores",
+			"item": [
+				{
+					"name": "Get Tutores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/API/tutor",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"tutor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tutores By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/API/tutor/65712421c1131dabd57ac371",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"tutor",
+								"65712421c1131dabd57ac371"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "65712421c1131dabd57ac371",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Tutores",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cedula\": \"1152464978\",\r\n    \"nombre\": \"Yessika Meliza\",\r\n    \"edad\": 26,\r\n    \"direccion\": \"calle 2 carrara 4\",\r\n    \"telefono\": \"354687987\",\r\n    \"email\": \"andurmon@gmail.com\",\r\n    \"tipoUsuario\": \"tutor\",\r\n    \"especialidad\": \"Fisica Nuclear\",\r\n    \"tarifaporhora\": \"50000\",\r\n    \"horariodisponible\": \"tardes\",\r\n    \"Estudiantes\": [\r\n        \"6570d6193124f410a338df09\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/API/tutor",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"tutor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Tutor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cedula\": \"1152446458\",\r\n    \"nombre\": \"Yeraldine Gonzalez\",\r\n    \"especialidad\": \"Fisica Nuclear\",\r\n    \"tarifaporhora\": \"100000\",\r\n    \"email\": \"yeraldine@gmail.com\",\r\n    \"horariodisponible\": \"tardes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/API/tutor/6574966852fd0c85efdc2535",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"tutor",
+								"6574966852fd0c85efdc2535"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "65712421c1131dabd57ac371",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete one Tutor By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/API/tutor/6574966852fd0c85efdc2535",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"tutor",
+								"6574966852fd0c85efdc2535"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "65712421c1131dabd57ac371",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Administradores",
+			"item": [
+				{
+					"name": "Get Administradores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/API/administrators",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"administrators"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get AdminsBy Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/API/administrators/6574ee98b839546d8c6fff12",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"administrators",
+								"6574ee98b839546d8c6fff12"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "65712421c1131dabd57ac371",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Admins",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Estudiantes\": [\r\n        \"6570d6193124f410a338df09\",\r\n        \"6570d69f3124f410a338df0e\"\r\n    ],\r\n    \"Tutors\": [\r\n        \"65749ed2e951a7fee61c1fa2\", \"6574f77bb212c9e2ed15d262\"\r\n    ],\r\n    \"cedula\": \"98654654\",\r\n    \"nombre\": \"Yessika Meliza\",\r\n    \"edad\": 26,\r\n    \"direccion\": \"calle 2 carrara 4\",\r\n    \"telefono\": \"354687987\",\r\n    \"email\": \"andurmon@gmail.com\",\r\n    \"tipoUsuario\": \"administrador\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/API/administrators",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"administrators"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Admin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cedula\": \"986546549979797\",\r\n    \"nombre\": \"Yessika Meliza\",\r\n    \"edad\": 26,\r\n    \"direccion\": \"calle 2 carrara 4\",\r\n    \"telefono\": \"354687987\",\r\n    \"email\": \"andurmon@gmail.com\",\r\n    \"tipoUsuario\": \"administrador\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/API/administrators/657514760d5b9fb111dd3fbd",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"administrators",
+								"657514760d5b9fb111dd3fbd"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "65712421c1131dabd57ac371",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete one Admin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/API/personas/6574d54dd259fdf059813fc5",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"personas",
+								"6574d54dd259fdf059813fc5"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "65712421c1131dabd57ac371",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Personas",
+			"item": [
+				{
+					"name": "Get Personas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/API/personas",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Personas by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/API/personas/6574d79ee944bad2559bcc01",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"personas",
+								"6574d79ee944bad2559bcc01"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "65712421c1131dabd57ac371",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Personas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cedula\": \"645869479\",\r\n    \"nombre\": \"Yessika Meliza\",\r\n    \"edad\": 26,\r\n    \"direccion\": \"calle 2 carrara 4\",\r\n    \"telefono\": \"354687987\",\r\n    \"email\": \"andurmon@gmail.com\",\r\n    \"tipoUsuario\": \"estudiante\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/API/personas",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Persona",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cedula\": \"645869479\",\r\n    \"nombre\": \"Yessika Meliza\",\r\n    \"edad\": 26,\r\n    \"direccion\": \"calle 2 carrara 4\",\r\n    \"telefono\": \"354687987\",\r\n    \"email\": \"andurmon@gmail.com\",\r\n    \"tipoUsuario\": \"estudiante\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/API/personas/6574d56cd259fdf059813fc7",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"personas",
+								"6574d56cd259fdf059813fc7"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "65712421c1131dabd57ac371",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete persona",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/API/personas/657516b57676cbf3173468ad",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"personas",
+								"657516b57676cbf3173468ad"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "65712421c1131dabd57ac371",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "localhost:9000",
+			"type": "string"
+		}
+	]
+}

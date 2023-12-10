@@ -65,21 +65,15 @@ class AdministratorService {
     async updateAdmin(req, res) {
         try {
             const { id } = req.params;
-            const { cedula, nombre, especialidad, tarifaporhora, email, horariodisponible } = req.body;
+            // const { cedula, nombre, especialidad, tarifaporhora, email, horariodisponible } = req.body;
             const admin = await AdministratorModel.updateOne(
                 { _id: id }, {
-                $set: {
-                    cedula,
-                    nombre,
-                    especialidad,
-                    tarifaporhora,
-                    email,
-                    horariodisponible
-                }
+                $set: req.body
             })
+            console.log('admin: ', admin);
             if (admin.modifiedCount === 0) {
                 res.status(404);
-                res.json({ message: "Tutor no encontrado" });
+                res.json({ message: "Administrador no encontrado" });
                 return;
             }
             res.json(admin);
@@ -100,7 +94,7 @@ class AdministratorService {
             const admin = await AdministratorModel.deleteOne({ _id: id }).exec()
             if (admin.deletedCount === 0) {
                 res.status(404);
-                res.json({ message: "Tutor no encontrado" });
+                res.json({ message: "Administrador no encontrado" });
                 return;
             }
             res.json(admin);

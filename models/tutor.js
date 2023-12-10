@@ -2,7 +2,7 @@ const moongose = require("mongoose");
 const autopopulate = require('mongoose-autopopulate');
 const { Persona } = require("./Personas");
 
-//* Clase Tutor se extiende de la clase persona
+//* Clase Tutor se extiende de la clase Persona
 class Tutor extends Persona {
     especialidad = {
         type: String,
@@ -32,8 +32,16 @@ class Tutor extends Persona {
         return this.horariodisponible;
     }
 
+    /**
+     * 
+     * @param {import("../models/Estudiante").Estudiante} estudiante 
+     * @param {Date} fecha 
+     * @param {Number} duracion 
+     * @returns 
+     */
     programarClase(estudiante, fecha, duracion) {
-        return "Clase programada"
+        console.log('fecha, duracion: ', fecha, duracion);
+        return this.Estudiantes.push(estudiante);
     }
 }
 

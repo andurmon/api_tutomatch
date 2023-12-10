@@ -19,12 +19,6 @@ class Administrator extends Persona {
 
     Tutors = { type: [moongose.Schema.Types.ObjectId], ref: "tutor", autopopulate: true, required: false }
 
-    Tutor = {
-        type: tutorSchema,
-        ref: "tutor",
-        required: false
-    }
-
     getEmail() {
         return this.email;
     }
