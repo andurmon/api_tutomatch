@@ -53,7 +53,34 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Yessika Meliza\",\r\n    \"cedula\": \"645869479\",\r\n    \"edad\": 26,\r\n    \"direccion\": \"calle 2 carrara 4\",\r\n    \"telefono\": \"354687987\",\r\n    \"email\": \"andurmon@gmail.com\",\r\n    \"tipoUsuario\": \"estudiante\",\r\n    \"niveleducativo\": \"bachiller\",\r\n    \"Tutors\": [\r\n        \"65749ed2e951a7fee61c1fa2\"\r\n    ]\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Yessika Meliza\",\r\n    \"cedula\": \"645869479\",\r\n    \"edad\": 26,\r\n    \"direccion\": \"calle 2 carrara 4\",\r\n    \"telefono\": \"354687987\",\r\n    \"email\": \"andurmon@gmail.com\",\r\n    \"tipoUsuario\": \"estudiante\",\r\n    \"niveleducativo\": \"bachiller\",\r\n    \"Tutors\": [\r\n        \"65751dcc2f24d4eadd174d1e\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/API/estudiante",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"API",
+								"estudiante"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post estudiantes Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Karol G\",\r\n    \"cedula\": \"645869479\",\r\n    \"edad\": 24,\r\n    \"direccion\": \"calle 2 carrara 4\",\r\n    \"telefono\": \"354687987\",\r\n    \"email\": \"karolg@gmail.com\",\r\n    \"tipoUsuario\": \"estudiante\",\r\n    \"niveleducativo\": \"bachiller\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -163,14 +190,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}/API/tutor/65712421c1131dabd57ac371",
+							"raw": "{{URL}}/API/tutor/65749ed2e951a7fee61c1fa2",
 							"host": [
 								"{{URL}}"
 							],
 							"path": [
 								"API",
 								"tutor",
-								"65712421c1131dabd57ac371"
+								"65749ed2e951a7fee61c1fa2"
 							],
 							"query": [
 								{
@@ -190,7 +217,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"cedula\": \"1152464978\",\r\n    \"nombre\": \"Yessika Meliza\",\r\n    \"edad\": 26,\r\n    \"direccion\": \"calle 2 carrara 4\",\r\n    \"telefono\": \"354687987\",\r\n    \"email\": \"andurmon@gmail.com\",\r\n    \"tipoUsuario\": \"tutor\",\r\n    \"especialidad\": \"Fisica Nuclear\",\r\n    \"tarifaporhora\": \"50000\",\r\n    \"horariodisponible\": \"tardes\",\r\n    \"Estudiantes\": [\r\n        \"6570d6193124f410a338df09\"\r\n    ]\r\n}",
+							"raw": "{\r\n    \"cedula\": \"1152464978\",\r\n    \"nombre\": \"Nicolas Jimenez\",\r\n    \"edad\": 26,\r\n    \"direccion\": \"calle 2 carrara 4\",\r\n    \"telefono\": \"354687987\",\r\n    \"email\": \"nicolasjimenes@gmail.com\",\r\n    \"tipoUsuario\": \"tutor\",\r\n    \"especialidad\": \"Ingles\",\r\n    \"tarifaporhora\": \"50000\",\r\n    \"horariodisponible\": \"tardes\",\r\n    \"Estudiantes\": [\r\n        \"65751cff2f24d4eadd174d14\", \"65751c9e2f24d4eadd174d12\"\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -225,14 +252,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{URL}}/API/tutor/6574966852fd0c85efdc2535",
+							"raw": "{{URL}}/API/tutor/65751d2d2f24d4eadd174d17",
 							"host": [
 								"{{URL}}"
 							],
 							"path": [
 								"API",
 								"tutor",
-								"6574966852fd0c85efdc2535"
+								"65751d2d2f24d4eadd174d17"
 							],
 							"query": [
 								{
@@ -327,7 +354,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"Estudiantes\": [\r\n        \"6570d6193124f410a338df09\",\r\n        \"6570d69f3124f410a338df0e\"\r\n    ],\r\n    \"Tutors\": [\r\n        \"65749ed2e951a7fee61c1fa2\", \"6574f77bb212c9e2ed15d262\"\r\n    ],\r\n    \"cedula\": \"98654654\",\r\n    \"nombre\": \"Yessika Meliza\",\r\n    \"edad\": 26,\r\n    \"direccion\": \"calle 2 carrara 4\",\r\n    \"telefono\": \"354687987\",\r\n    \"email\": \"andurmon@gmail.com\",\r\n    \"tipoUsuario\": \"administrador\"\r\n}",
+							"raw": "{\r\n    \"Estudiantes\": [\r\n        \"6570d6193124f410a338df09\",\r\n        \"6570d69f3124f410a338df0e\"\r\n    ],\r\n    \"Tutors\": [\r\n        \"65751e1f2f24d4eadd174d25\", \"65751d2d2f24d4eadd174d17\"\r\n    ],\r\n    \"cedula\": \"98654654\",\r\n    \"nombre\": \"Yessika Meliza\",\r\n    \"edad\": 26,\r\n    \"direccion\": \"calle 2 carrara 4\",\r\n    \"telefono\": \"354687987\",\r\n    \"email\": \"andurmon@gmail.com\",\r\n    \"tipoUsuario\": \"administrador\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -499,14 +526,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{URL}}/API/personas/6574d56cd259fdf059813fc7",
+							"raw": "{{URL}}/API/personas/65751e632f24d4eadd174d2f",
 							"host": [
 								"{{URL}}"
 							],
 							"path": [
 								"API",
 								"personas",
-								"6574d56cd259fdf059813fc7"
+								"65751e632f24d4eadd174d2f"
 							],
 							"query": [
 								{
